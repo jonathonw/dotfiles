@@ -2,3 +2,4 @@
 
 * Package Manager
 * SublimeREPL
+* SublimeCodeIntel
