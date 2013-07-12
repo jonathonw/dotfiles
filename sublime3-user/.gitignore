@@ -1,0 +1,6 @@
+*.cache
+SublimeREPLHistory/
+Package Control.last-run
+Package Control.sublime-settings
+Package Control.ca-bundle
+Package Control.ca-list
