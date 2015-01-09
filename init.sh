@@ -16,12 +16,23 @@ else
   echo "  Delete it first if you want to use this user settings package"
 fi
 
-if [ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Package\ Control ]; then
-  echo "Installing Package Control for Sublime 3..."
-  cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-  git clone https://github.com/wbond/sublime_package_control.git "Package Control"
-  cd "Package Control"
-  git checkout python3
+if [ ! -d ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages ]; then
+  echo "Creating installed packages directory"
+  mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
 else
-  echo "Looks like Package Control for Sublime 3 is already installed... skipping"
+  echo "Looks like you already have an ST Installed Packages directory...  skipping"
+fi
+
+if [ ! -f ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package ]; then
+  echo "Installing Package Control for Sublime 3..."
+  cd ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+  curl -# -o "Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package
+else
+  echo "Looks like you already have Package Control installed...  skipping"
+fi
+
+if [ ! -f /usr/local/bin/subl ]; then
+  ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+else
+  echo "subl command line tool already installed... skipping"
 fi
