@@ -5,9 +5,11 @@
 	],
 	"installed_packages":
 	[
+		"HexViewer",
 		"Jedi - Python autocompletion",
 		"Package Control",
 		"Protocol Buffer Syntax",
+		"Sass",
 		"Theme - Soda"
 	]
 }

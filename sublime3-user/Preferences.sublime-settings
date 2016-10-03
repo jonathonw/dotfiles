@@ -19,7 +19,7 @@
 	"preview_on_click": false,
 	"shift_tab_unindent": true,
 	"soda_folder_icons": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"theme": "Soda Dark.sublime-theme",
 	"translate_tabs_to_spaces": true
 }
