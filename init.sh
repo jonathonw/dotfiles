@@ -18,14 +18,14 @@ else
   echo "  Delete it first if you want to use this user settings package"
 fi
 
-if [ ! -d "$SUBLIME_CONFIG_DIR/Installed\ Packages" ]; then
+if [ ! -d "$SUBLIME_CONFIG_DIR/Installed Packages" ]; then
   echo "Creating installed packages directory"
-  mkdir -p "$SUBLIME_CONFIG_DIR/Installed\ Packages"
+  mkdir -p "$SUBLIME_CONFIG_DIR/Installed Packages"
 else
   echo "Looks like you already have an ST Installed Packages directory...  skipping"
 fi
 
-if [ ! -f "$SUBLIME_CONFIG_DIR/Installed\ Packages/Package\ Control.sublime-package" ]; then
+if [ ! -f "$SUBLIME_CONFIG_DIR/Installed Packages/Package Control.sublime-package" ]; then
   echo "Installing Package Control for Sublime 3..."
   cd "$SUBLIME_CONFIG_DIR/Installed\ Packages"
   curl -# -o "Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package
