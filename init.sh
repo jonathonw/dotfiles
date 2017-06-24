@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SUBLIME_CONFIG_DIR=~/.config/sublime-text-3
+SUBLIME_CONFIG_DIR=~/Library/Application\ Support/Sublime\ Text\ 3
 
 if [ ! -d "$SUBLIME_CONFIG_DIR/Packages" ]; then
   echo "Creating Sublime 3 settings directory"
@@ -27,14 +27,14 @@ fi
 
 if [ ! -f "$SUBLIME_CONFIG_DIR/Installed Packages/Package Control.sublime-package" ]; then
   echo "Installing Package Control for Sublime 3..."
-  cd "$SUBLIME_CONFIG_DIR/Installed\ Packages"
+  cd "$SUBLIME_CONFIG_DIR/Installed Packages"
   curl -# -o "Package Control.sublime-package" https://packagecontrol.io/Package%20Control.sublime-package
 else
   echo "Looks like you already have Package Control installed...  skipping"
 fi
 
-#if [ ! -f /usr/local/bin/subl ]; then
-#  ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-#else
-#  echo "subl command line tool already installed... skipping"
-#fi
+if [ ! -f /usr/local/bin/subl ]; then
+  ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+else
+  echo "subl command line tool already installed... skipping"
+fi
