@@ -6,10 +6,15 @@
 	],
 	"installed_packages":
 	[
+<<<<<<< HEAD
 		"Cython",
 		"Indent XML",
+=======
+		"HexViewer",
+>>>>>>> 8dfeaa1a7fe91498b75c3bff75c05e30f2197d28
 		"Jedi - Python autocompletion",
 		"Package Control",
+		"Project Specific Syntax Settings",
 		"Protocol Buffer Syntax",
 		"Sass",
 		"Theme - Soda"
